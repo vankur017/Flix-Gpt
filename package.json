@@ -17,6 +17,15 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vankur017/Flix-Gpt.git"
+  },
+  "author": "Ankur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vankur017/Flix-Gpt"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
