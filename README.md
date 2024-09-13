@@ -2,6 +2,19 @@
 
 -Create React App => npx create-react-app {folder}
 -TailWind CSS install and configured for create-reacct-app
+-Header
+-Routing
+-Login Form
+-Sign Up Form
+-Form Validation
+-useRef hook
+-Firebase Setup 
+-Deploying our app to production
+-Create Signup Auth in Firebase
+-Implement SignIn User API
+-Create Redux Store for userSlice
+-Implemented Signout using Firebase API
+-Dispatch a new action while SignUp to fetch the updated values from auth
 
 
 # Features
