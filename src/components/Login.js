@@ -3,7 +3,6 @@ import Header from './Header';
 import { checkValidData } from '../utils/validate';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile  } from "firebase/auth";
 import {auth} from '../utils/firebase'
-import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 
@@ -14,7 +13,6 @@ const Login = () => {
   const name = useRef(null)
   const email = useRef(null);
   const password = useRef(null);
-  const navigate = useNavigate()
   const dispatch = useDispatch()
     
 
@@ -54,7 +52,7 @@ const Login = () => {
         email:email, 
         displayName: displayName
       }))
-      navigate("/browse")
+     
       // ...
     }).catch((error) => {
       // An error occurred
@@ -82,8 +80,7 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in 
         
-      
-        navigate("/browse")
+    
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -110,9 +107,9 @@ const Login = () => {
              alt="Not rendered"
             />
             </div>
-      <form onSubmit={(e)=>e.preventDefault()} className='w-3/12 absolute p-12 bg-black mx-auto left-0 right-0 my-44 rounded-lg text-white opacity-80'>
+      <form onSubmit={(e)=>e.preventDefault()} className='w-3/12 absolute p-16 bg-black mx-auto left-0 right-0 my-44 rounded-lg text-white opacity-85'>
        
-       <h1 className='font-bold text-3xl mt-6 py-4 px-8'>
+       <h1 className='font-bold text-3xl mt-6 py-4 px-3 opacity-100'>
         {isSignInForm ? 'Sign In' : 'Sign Up'}
        </h1>
        

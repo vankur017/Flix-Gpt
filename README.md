@@ -15,6 +15,8 @@
 -Create Redux Store for userSlice
 -Implemented Signout using Firebase API
 -Dispatch a new action while SignUp to fetch the updated values from auth
+-Bug Fix of SignUp User, display name
+-Bug Fix if the user is not logged in redirect "/browse" to "/" or vice versa
 
 
 # Features
