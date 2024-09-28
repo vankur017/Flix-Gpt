@@ -1,3 +1,7 @@
+#IMP NOTICE =>
+-Get Software from "https://one.one.one.one" and install it to not face any network provider issue while making API calls
+
+
 # Flix GPT 
 
 -Create React App => npx create-react-app {folder}
@@ -20,7 +24,8 @@
 -Unsubscribed to the onAuthStateChanged Callback function
 -Register for TMDB API and get Access Token
 -Get Data from TMDB Now Playing Movie List 
--Get Software from "https://one.one.one.one" and install it to not face any network provider issue while making API calls
+
+
 -Custom hook for Now Playing Movies
 -Planning for MainContainer and secondary container
 -Fetch Data for Trailer Video
