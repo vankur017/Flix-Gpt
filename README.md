@@ -1,6 +1,6 @@
 #IMP NOTICE =>
 -Get Software from "https://one.one.one.one" and install it to not face any network provider issue while making API calls
-
+![alt text](image.png)
 
 # Flix GPT 
 
