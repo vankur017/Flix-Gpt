@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import {auth} from '../utils/firebase'
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
-
+import {BACKGROUND_IMG} from '../utils/constants'
 const Login = () => {
 
   const [isSignInForm, setSignInForm] = useState(true);
@@ -103,8 +103,8 @@ const Login = () => {
       <Header/>
       <div className='absolute h-screen w-full'>
           <img className='absolute top-0 left-0 object-cover w-full h-full'
-            src="https://assets.nflxext.com/ffe/siteui/vlv3/dae1f45f-c2c5-4a62-8d58-6e1b0c6b2d8e/6d1fb8a4-5844-42a4-9b01-1c6c128acf19/IN-en-20240827-TRIFECTA-perspective_WEB_c292a608-cdc6-4686-8dc8-405bfcf753af_small.jpg" srcset="https://assets.nflxext.com/ffe/siteui/vlv3/dae1f45f-c2c5-4a62-8d58-6e1b0c6b2d8e/6d1fb8a4-5844-42a4-9b01-1c6c128acf19/IN-en-20240827-TRIFECTA-perspective_WEB_c292a608-cdc6-4686-8dc8-405bfcf753af_small.jpg 1000w, https://assets.nflxext.com/ffe/siteui/vlv3/dae1f45f-c2c5-4a62-8d58-6e1b0c6b2d8e/6d1fb8a4-5844-42a4-9b01-1c6c128acf19/IN-en-20240827-TRIFECTA-perspective_WEB_c292a608-cdc6-4686-8dc8-405bfcf753af_medium.jpg 1500w, https://assets.nflxext.com/ffe/siteui/vlv3/dae1f45f-c2c5-4a62-8d58-6e1b0c6b2d8e/6d1fb8a4-5844-42a4-9b01-1c6c128acf19/IN-en-20240827-TRIFECTA-perspective_WEB_c292a608-cdc6-4686-8dc8-405bfcf753af_large.jpg 1800w"
-             alt="Not rendered"
+            src={BACKGROUND_IMG} 
+            alt="Not rendered"
             />
             </div>
       <form onSubmit={(e)=>e.preventDefault()} className='w-3/12 absolute p-16 bg-black mx-auto left-0 right-0 my-44 rounded-lg text-white opacity-85'>

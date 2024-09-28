@@ -17,6 +17,16 @@
 -Dispatch a new action while SignUp to fetch the updated values from auth
 -Bug Fix of SignUp User, display name
 -Bug Fix if the user is not logged in redirect "/browse" to "/" or vice versa
+-Unsubscribed to the onAuthStateChanged Callback function
+-Register for TMDB API and get Access Token
+-Get Data from TMDB Now Playing Movie List 
+-Get Software from "https://one.one.one.one" and install it to not face any network provider issue while making API calls
+-Custom hook for Now Playing Movies
+-Planning for MainContainer and secondary container
+-Fetch Data for Trailer Video
+-Update Store with Trailer Video Data
+-Embedded the Youtube and make it autoplay and mute
+-Tailwind classes to make MainContainer look awesome
 
 
 # Features
