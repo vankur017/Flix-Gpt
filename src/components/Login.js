@@ -52,6 +52,7 @@ const Login = () => {
         email:email, 
         displayName: displayName
       }))
+     console.log(displayName);
      
       // ...
     }).catch((error) => {

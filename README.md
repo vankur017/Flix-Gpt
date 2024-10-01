@@ -24,8 +24,6 @@
 -Unsubscribed to the onAuthStateChanged Callback function
 -Register for TMDB API and get Access Token
 -Get Data from TMDB Now Playing Movie List 
-
-
 -Custom hook for Now Playing Movies
 -Planning for MainContainer and secondary container
 -Fetch Data for Trailer Video

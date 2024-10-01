@@ -9,11 +9,10 @@ const MainContainer = () => {
     if(movies==null) return
     const i = Math.floor(Math.random()*20)
     const mainMovie = movies[i]
-    console.log(mainMovie);
+   
 
     const {original_title, overview, id } = mainMovie
-  console.log(id);
-  
+
   return (
     <div>
         <VideoTitle title={original_title} overview={overview} id={id}/>
