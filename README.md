@@ -2,6 +2,15 @@
 -Get Software from "https://one.one.one.one" and install it to not face any network provider issue while making API calls
 ![alt text](image.png)
 
+# To Start Server Locally:-
+
+ "npm run start"
+
+#To Start a Production Build:-
+
+"npm run  buil"
+ 
+
 # Flix GPT 
 
 -Create React App => npx create-react-app {folder}
