@@ -8,7 +8,7 @@
 
 #To Start a Production Build:-
 
-"npm run  buil"
+"npm run  build"
  
 
 # Flix GPT 
