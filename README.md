@@ -1,8 +1,11 @@
 ############## IMP NOTICE ######
 
 
-Get Software from "https://one.one.one.one" and install it to not face any network provider issue while making API calls
+->Get Software from "https://one.one.one.one" and install it to not face any network provider issue while making API calls
 ![alt text](image.png)
+
+->Open this Warp App by cloudflare and turn it on
+
 
 # To Start Server Locally:-
 
