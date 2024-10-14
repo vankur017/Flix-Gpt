@@ -1,10 +1,24 @@
-############## IMP NOTICE ######
+BEFORE USING DEPLOYED URL FROM REPOSITORY FOLLOW BELOW TWO STEPS
+
+####### IMP NOTICE ######
 
 
-->Get Software from "https://one.one.one.one" and install it to not face any network provider issue while making API calls
+1>Get Software from "https://one.one.one.one" and install it to not face any network provider issue while making API calls
 ![alt text](image.png)
 
-->Open this Warp App by cloudflare and turn it on
+2>Open this Warp App by cloudflare and turn it on
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # To Start Server Locally:-
