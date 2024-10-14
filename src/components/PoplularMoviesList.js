@@ -6,7 +6,7 @@ import PopularMovieCard from './PopularMovieCard';
 const PopularMoviesList = ({title, popularmovies}) => {
 
   // console.log(title);
-  console.log(popularmovies.poster_path);
+  // console.log(popularmovies.poster_path);
     
 
   return (

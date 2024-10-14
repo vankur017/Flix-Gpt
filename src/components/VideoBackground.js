@@ -12,7 +12,7 @@ const VideoBackground = ({id}) => {
    
   
     return (
-        <div className='w-screen '>
+        <div className='w-full'>
        
         {trailerVideo ? (  // Check if trailerVideo exists
           <iframe
