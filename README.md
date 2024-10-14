@@ -1,6 +1,34 @@
-#IMP NOTICE =>
--Get Software from "https://one.one.one.one" and install it to not face any network provider issue while making API calls
+BEFORE USING DEPLOYED URL FROM REPOSITORY FOLLOW BELOW TWO STEPS
+
+####### IMP NOTICE ######
+
+
+1>Get Software from "https://one.one.one.one" and install it to not face any network provider issue while making API calls
 ![alt text](image.png)
+
+2>Open this Warp App by cloudflare and turn it on
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# To Start Server Locally:-
+
+ "npm run start"
+
+#To Start a Production Build:-
+
+"npm run  build"
+ 
 
 # Flix GPT 
 
