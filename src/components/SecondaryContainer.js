@@ -4,8 +4,10 @@ import MovieList from './MovieList'
 import useNowPlayingMovie from '../utils/useNowPlayingMovie'
 import PopularMoviesList from './PoplularMoviesList'
 import TopRatedMovieList from './TopRatedMovieList'
+import UpcomingMovieList from './UpcomingMovieList'
 import usePopularMovies from '../utils/usePopularMovies'
 import useTopRatedMovies from '../utils/useTopRatedMovies'
+import useUpcomingMovie from '../utils/useUpcomingMovie'
 
 const SecondaryContainer = () => {
 
@@ -19,15 +21,21 @@ const SecondaryContainer = () => {
       const topRatedMoviesList = useSelector((store)=>store.movies.topRatedMoviesList)
       useTopRatedMovies()
       console.log(topRatedMoviesList);
+
+      const upcomingMoviesList = useSelector((store)=>store.movies?.upcomingMoviesList)
+      useUpcomingMovie()
+      console.log(upcomingMoviesList);
+      
    
   return (
     
     <div className=' bg-black'>
        
-         <div className=' -mt-[230px] pl-12 relative z-20' >
+         <div className=' -mt-[250px] relative z-20 pl-10 -mr-[15px]' >
            <MovieList title={"Now Playing"} movies={nowPlayingList}/>
            <PopularMoviesList title={"Popular Movies"} popularmovies={popularMovieList}/>
            <TopRatedMovieList title={"Top Rated"} toprated={topRatedMoviesList}/>
+           <UpcomingMovieList title={"Upcoming"} upcoming = {upcomingMoviesList}/>
          </div>
   
       

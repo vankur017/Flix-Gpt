@@ -52,14 +52,14 @@ const Login = () => {
         email:email, 
         displayName: displayName
       }))
-     console.log(displayName);
+    
      
       // ...
     }).catch((error) => {
       // An error occurred
       // ...
     });
-        console.log(userCredential);
+  
        
      
     })

@@ -9,5 +9,22 @@ export const API_OPTIONS = {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNzI0NWUyMjJhMDhlNjM0NTg3MDg4ZTVhNjllNjA0MSIsIm5iZiI6MTcyNjMzNDk1MS42NTEzODYsInN1YiI6IjY2NjUzZDY0OGJjNjUzNDRjMDljZjg2YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.OwTJWlcc8DcXZNtNPMT-VqpB9JKZXCAw9BrGvTKUdlA'
     }
   };
-export const IMAGE_URL = "https://image.tmdb.org/t/p/w500/"  
-  
+
+
+  export const IMAGE_URL = "https://image.tmdb.org/t/p/w500/"  
+
+  export const SUPPORTED_LANG = [
+                                  {
+                                    identifier : "en-US",
+                                    name      :  "English"
+                                  },
+                                  {
+                                    identifier : "hindi",
+                                    name      :  "Hindi"
+                                  },
+                                  {
+                                    identifier : "spanish",
+                                    name      :  "Spanish"
+                                  },
+                                
+                                ]

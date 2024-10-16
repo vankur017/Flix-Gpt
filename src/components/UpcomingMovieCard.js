@@ -1,8 +1,7 @@
 import React from 'react'
 import { IMAGE_URL } from '../utils/constants';
-const TopRatedMovieCard = ({posterPath}) => {
+const UpcomingMovieCard = ({posterPath}) => {
    
-    // console.log(posterPath);
     
   return (
     <div className='w-48 pr-4 '>
@@ -11,4 +10,4 @@ const TopRatedMovieCard = ({posterPath}) => {
   )
 }
 
-export default TopRatedMovieCard
+export default UpcomingMovieCard

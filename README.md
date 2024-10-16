@@ -58,6 +58,10 @@ BEFORE USING DEPLOYED URL FROM REPOSITORY FOLLOW BELOW TWO STEPS
 -Update Store with Trailer Video Data
 -Embedded the Youtube and make it autoplay and mute
 -Tailwind classes to make MainContainer look awesome
+-GPT Search Page
+-GPT Search Bar
+-Multilingual Feature in our GPT Search Page
+-
 
 
 # Features

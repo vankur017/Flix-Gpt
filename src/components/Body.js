@@ -21,7 +21,7 @@ const Body = () => {
  
 
   return (
-    <div className='text-lg'>
+    <div className='text-lg bg-black'>
        <RouterProvider router={AppRouter}/>
     </div>
   )
