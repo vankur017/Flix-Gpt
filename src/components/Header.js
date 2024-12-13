@@ -14,7 +14,7 @@ import { changeLanguage } from '../utils/configSlice'
 const Header = () => {
   
   const langref = useRef()
-  console.log(langref);
+ // console.log(langref);
   
   const navigate = useNavigate()
   
@@ -60,6 +60,7 @@ const Header = () => {
   }, [])
 
   const handleGptSearchClick = ()=>{
+   
       dispatch(toggleGptSearchView())
   }
 
@@ -71,7 +72,7 @@ const Header = () => {
 
   const config  = useSelector(store=>store.gpt.showGptSearch)
 
-  console.log(config);
+  //console.log(config);
   
   return (
     <div className='flex absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full justify-between'>

@@ -12,6 +12,9 @@ export const API_OPTIONS = {
 
 
   export const IMAGE_URL = "https://image.tmdb.org/t/p/w500/"  
+  
+  export const MOVIE_PAGE_URL = "https://api.themoviedb.org/3/movie/"
+
 
   export const SUPPORTED_LANG = [
                                   {
@@ -28,3 +31,7 @@ export const API_OPTIONS = {
                                   },
                                 
                                 ]
+
+  export const OPEN_AI_KEY = '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'
+  export const OPEN_AI_PROJECT_ID='proj_PcKbi9dNBGXbSXUMr4g3VCfB'
+  export const OPEN_AI_ORG_ID = 'org-edh4L4TqJQi2syrhge5d3Qcg'

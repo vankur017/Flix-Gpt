@@ -14,7 +14,7 @@ const useUpcomingMovie = () => {
 
         // console.log(json.results);
         dispatch(addUpcomingMovies(json.results))
-         console.log(dispatch);
+     //    console.log(dispatch);
         
     }
 

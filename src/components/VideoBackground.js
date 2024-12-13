@@ -9,25 +9,21 @@ const VideoBackground = ({id}) => {
     //fetch trailer Video && updating the store with trailer video data
     useMovieTrailer(id)
   
-   
-  
     return (
-        <div className='w-full'>
-       
-        {trailerVideo ? (  // Check if trailerVideo exists
+      <div className="w-full aspect-video">
+        {trailerVideo ? (
           <iframe
-            className='w-screen aspect-video h-full object-fill'
-            src={`https://www.youtube.com/embed/${trailerVideo.key}?&autoplay=1&mute=1`} // Using trailerVideo key to embed
+            className="w-full h-full"
+            src={`https://www.youtube.com/embed/${trailerVideo.key}?&autoplay=1&mute=1`}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
-            
           ></iframe>
         ) : (
-          <p>Loading trailer...</p>  // Provide a fallback when trailerVideo is null
+          <p>Loading trailer...</p>
         )}
       </div>
-  )
-}
+    );
+  }    
 
 export default VideoBackground
