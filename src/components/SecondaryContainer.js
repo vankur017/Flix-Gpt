@@ -15,32 +15,25 @@ const SecondaryContainer = () => {
       const nowPlayingList = useSelector((store)=>store.movies?.nowPlayingList)
       useNowPlayingMovie()
 
-      const popularMovieList = useSelector((store)=>store.movies?.popularMovieList)
+      const popularMovieList = useSelector((store) => store.movies?.popularMovieList)
       usePopularMovies()
-  
-      const topRatedMoviesList = useSelector((store)=>store.movies.topRatedMoviesList)
-      useTopRatedMovies()
-      //console.log(topRatedMoviesList);
-
-      const upcomingMoviesList = useSelector((store)=>store.movies?.upcomingMoviesList)
-      useUpcomingMovie()
-     // console.log(upcomingMoviesList);
-      
-   
-  return (
     
-    <div className=' bg-black'>
-       
-         <div className=' -mt-[450px] relative z-20 pl-10 -mr-[15px]' >
-           <MovieList title={"Now Playing"} movies={nowPlayingList}/>
-           <PopularMoviesList title={"Popular Movies"} popularmovies={popularMovieList}/>
-           <TopRatedMovieList title={"Top Rated"} toprated={topRatedMoviesList}/>
-           <UpcomingMovieList title={"Upcoming"} upcoming = {upcomingMoviesList}/>
-         </div>
-  
-      
-    </div>
-  )
-}
-
-export default SecondaryContainer
+      const topRatedMoviesList = useSelector((store) => store.movies.topRatedMoviesList)
+      useTopRatedMovies()
+    
+      const upcomingMoviesList = useSelector((store) => store.movies?.upcomingMoviesList)
+      useUpcomingMovie()
+    
+      return (
+        <div className="bg-black pt-8">
+          <div className="relative z-20 pl-4 sm:pl-6 md:pl-10">
+            <MovieList title="Now Playing" movies={nowPlayingList} />
+            <PopularMoviesList title="Popular Movies" popularmovies={popularMovieList} />
+            <TopRatedMovieList title="Top Rated" toprated={topRatedMoviesList} />
+            <UpcomingMovieList title="Upcoming" upcoming={upcomingMoviesList} />
+          </div>
+        </div>
+      )
+    }
+    
+    export default SecondaryContainer
