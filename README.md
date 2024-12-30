@@ -1,83 +1,77 @@
-BEFORE USING DEPLOYED URL FROM REPOSITORY FOLLOW BELOW TWO STEPS
+    # Important Notice Before Using Deployed URL
 
-####### IMP NOTICE ######
+    ####### IMP NOTICE ######
 
+    1. Get Software from "https://one.one.one.one" and install it to avoid network provider issues with API calls
 
-1>Get Software from "https://one.one.one.one" and install it to not face any network provider issue while making API calls
-![alt text](image.png)
+    2. Open Warp App by Cloudflare and enable it before proceeding
 
-2>Open this Warp App by cloudflare and turn it on
+    These steps are mandatory for proper functionality of the application.
+    # Flix GPT - Streaming Platform with AI Integration
 
+    ## Important Pre-requisites
+    Before using the deployed application, please complete these mandatory steps:
+    1. Install the DNS resolver from [Cloudflare](https://one.one.one.one) to prevent API connectivity issues
+    2. Download and activate the Warp App by Cloudflare
 
+    ## Quick Start
+    ```bash
+    # Start Development Server
+    npm run start
 
+    # Create Production Build
+    npm run build
+    ```
 
+    ## Development Journey
+    1. **Initial Setup**
+        - Created React application using Create React App
+        - Configured Tailwind CSS
+        - Implemented routing architecture
 
+    2. **Authentication**
+        - Built Login/Signup forms with validation
+        - Integrated Firebase authentication
+        - Implemented protected routes
+        - Added user state management with Redux
 
+    3. **Core Features**
+        - TMDB API integration
+        - Custom hooks for movie data
+        - Main container with auto-playing trailers
+        - Movie recommendations
+        - Multi-language support
 
+    4. **GPT Integration**
+        - Search functionality
+        - AI-powered recommendations
+        - Multilingual search support
 
+    ## Architecture
+    ### Pages
+    - **Authentication Page**
+      - Login/Signup forms
+      - Form validation
+      - Redirect handling
 
+    - **Browse Page**
+      - Header component
+      - Featured movie with trailer
+      - Scrollable movie lists
+      - Recommendation sections
 
+    - **GPT Search**
+      - Intelligent search bar
+      - Dynamic movie suggestions
+      - Multi-language interface
 
+    ## Technical Stack
+    - React.js
+    - Redux Toolkit
+    - Firebase Auth
+    - Tailwind CSS
+    - TMDB API
+    - GPT Integration
 
-
-
-# To Start Server Locally:-
-
- "npm run start"
-
-#To Start a Production Build:-
-
-"npm run  build"
- 
-
-# Flix GPT 
-
--Create React App => npx create-react-app {folder}
--TailWind CSS install and configured for create-reacct-app
--Header
--Routing
--Login Form
--Sign Up Form
--Form Validation
--useRef hook
--Firebase Setup 
--Deploying our app to production
--Create Signup Auth in Firebase
--Implement SignIn User API
--Create Redux Store for userSlice
--Implemented Signout using Firebase API
--Dispatch a new action while SignUp to fetch the updated values from auth
--Bug Fix of SignUp User, display name
--Bug Fix if the user is not logged in redirect "/browse" to "/" or vice versa
--Unsubscribed to the onAuthStateChanged Callback function
--Register for TMDB API and get Access Token
--Get Data from TMDB Now Playing Movie List 
--Custom hook for Now Playing Movies
--Planning for MainContainer and secondary container
--Fetch Data for Trailer Video
--Update Store with Trailer Video Data
--Embedded the Youtube and make it autoplay and mute
--Tailwind classes to make MainContainer look awesome
--GPT Search Page
--GPT Search Bar
--Multilingual Feature in our GPT Search Page
--
-
-
-# Features
--Login/Signup Page
-    - Sign In/ Singup Form
-    -redirect to Browse Page
-
--Browse Page(Comes After Authentication)
-    - Header
-    -Main movie
-        - Trailer in Background
-        - Movie title and description
-        -Movie Suggestions
-            - MovieLists * n (Vertically scrollable)
-
--Flix Gpt 
-    - Search Bar
-    - Movie Suggestions
-    
+    ## Deployment
+    Application is deployed and ready to use after completing the pre-requisite steps mentioned above.
