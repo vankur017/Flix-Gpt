@@ -8,6 +8,7 @@ import UpcomingMovieList from './UpcomingMovieList'
 import usePopularMovies from '../utils/usePopularMovies'
 import useTopRatedMovies from '../utils/useTopRatedMovies'
 import useUpcomingMovie from '../utils/useUpcomingMovie'
+import ApiError from './ApiError'
 
 const SecondaryContainer = () => {
 
@@ -23,15 +24,29 @@ const SecondaryContainer = () => {
     
       const upcomingMoviesList = useSelector((store) => store.movies?.upcomingMoviesList)
       useUpcomingMovie()
+
     
+      const ismovies = nowPlayingList && popularMovieList && topRatedMoviesList && upcomingMoviesList
+      console.log(ismovies);
+
+      
       return (
         <div className="bg-black pt-8">
-          <div className="relative z-20 pl-4 sm:pl-6 md:pl-10">
-            <MovieList title="Now Playing" movies={nowPlayingList} />
-            <PopularMoviesList title="Popular Movies" popularmovies={popularMovieList} />
-            <TopRatedMovieList title="Top Rated" toprated={topRatedMoviesList} />
-            <UpcomingMovieList title="Upcoming" upcoming={upcomingMoviesList} />
-          </div>
+          {
+            ismovies.length===0 ?
+                 '' :
+            <>
+                       <div className="relative z-20 pl-4 sm:pl-6 md:pl-10">
+
+                            <MovieList title="Now Playing" movies={nowPlayingList} />
+                            <PopularMoviesList title="Popular Movies" popularmovies={popularMovieList} />
+                            <TopRatedMovieList title="Top Rated" toprated={topRatedMoviesList} />
+                            <UpcomingMovieList title="Upcoming" upcoming={upcomingMoviesList} />
+                       </div>
+                      </>
+
+          }
+         
         </div>
       )
     }

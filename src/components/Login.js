@@ -6,6 +6,7 @@ import {auth} from '../utils/firebase'
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import {BACKGROUND_IMG} from '../utils/constants'
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
 
   const [isSignInForm, setSignInForm] = useState(true);
@@ -14,6 +15,7 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
   const dispatch = useDispatch()
+  const navigate = useNavigate()
     
 
   const handleClick = ()=>{
@@ -59,6 +61,8 @@ const Login = () => {
     }).catch((error) => {
       // An error occurred
       // ...
+      setErrorMessage(error.message)
+      navigate('/browse')
     });
   
        

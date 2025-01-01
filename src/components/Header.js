@@ -6,13 +6,23 @@ import { useSelector } from 'react-redux'
 import { onAuthStateChanged } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
+import { removeMovies } from '../utils/movieSlice'
 import { LOGO, AVATAR, SUPPORTED_LANG } from '../utils/constants'
 import { toggleGptSearchView } from '../utils/gptSlice'
 import { useRef } from 'react'
 import { changeLanguage } from '../utils/configSlice'
+import ApiError from './ApiError'
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const user = useSelector(store=>store.user)
+
+  
+  const config  = useSelector(store=>store.gpt.showGptSearch)
+
+
+  const movies = useSelector(store=>store.movies)
+  const ismovies = movies.nowPlayingList && movies.popularMovieList && movies.topRatedMoviesList && movies.upcomingMoviesList
  
 
   const toggleMenu = () => {
@@ -26,7 +36,7 @@ const Header = () => {
   
   const dispatch = useDispatch()
 
-  const user = useSelector(store=>store.user)
+ 
 
 
   const handleSignout = ()=>{
@@ -34,7 +44,9 @@ const Header = () => {
     .then(() => {})
     .catch((error) => {
       // An error happened.
-      navigate("/error")
+      dispatch(removeMovies())
+      dispatch(removeUser());
+      navigate("/")
     });
 
   
@@ -56,6 +68,7 @@ const Header = () => {
       } else {
         // User is signed out
         // ...
+        dispatch(removeMovies())
         dispatch(removeUser());
         navigate("/")
     
@@ -64,6 +77,7 @@ const Header = () => {
     //Unsubscribe when the components unmounts
     return ()=> unsubscribe()
   }, [])
+
 
   const handleGptSearchClick = ()=>{
    
@@ -76,44 +90,60 @@ const Header = () => {
     
   }
 
-  const config  = useSelector(store=>store.gpt.showGptSearch)
-
   //console.log(config);
   
   return (
-    <div className='flex absolute px-8 py-2 bg-gradient-to-b from-black z-40 w-full justify-between'>
-      <img className="w-16 sm:w-24 md:w-32 lg:w-48 xl:w-64 h-16 sm:h-24 md:h-32 lg:h-36 xl:h-40 pl-2 sm:pl-4 md:pl-6 lg:pl-8" src={LOGO} alt="no render" />
-      <div className='flex items-center'>
-       
+    <div className="flex absolute px-8 py-2 bg-gradient-to-b from-black z-40 w-full justify-between">
+      <img
+        className="w-16 sm:w-24 md:w-32 lg:w-48 xl:w-64 h-16 sm:h-24 md:h-32 lg:h-36 xl:h-40 pl-2 sm:pl-4 md:pl-6 lg:pl-8"
+        src={LOGO}
+        alt="no render"
+      />
+      <div className="flex items-center">
         {user && (
-          <> <button className='text-white sm:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white' onClick={toggleMenu}>
-          ☰
-        </button>
-        <div className={`flex-col sm:flex-row justify-center items-center p-4 sm:p-6 ${menuOpen ? 'flex' : 'hidden'} sm:flex`}>
-            {config && (
-              <select className='bg-gray-900 text-white mb-4 sm:mb-0 mr-0 sm:mr-4 px-3 sm:px-5 py-1 sm:py-2 rounded-2xl' onChange={handleLanguageChange}>
-                {SUPPORTED_LANG.map(lang => (
-                  <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>
-                ))}
-              </select>
-            )}
+          <>
             <button
-              className='bg-purple-900 text-white mb-4 sm:mb-0 mr-0 sm:mr-6 px-3 sm:px-5 py-1 sm:py-2 rounded-xl'
-              onClick={handleGptSearchClick}
+              className="text-white sm:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              onClick={toggleMenu}
             >
-              {config ? 'Homepage' : 'GPT Search'}
+              ☰
             </button>
-            <img
-              className='w-8 h-8 sm:w-11 sm:h-11 rounded-md mb-4 sm:mb-0'
-              alt="usericon"
-              src={AVATAR}
-            />
-            <button className='text-white font-bold opacity-100' onClick={handleSignout}>
-              Sign Out
-            </button>
-          </div>
-        </>
-          
+            <div
+              className={`flex-col sm:flex-row justify-center items-center p-4 sm:p-6 ${
+                menuOpen ? 'flex' : 'hidden'
+              } sm:flex`}
+            >
+              {config && (
+                <select
+                  className="bg-gray-900 text-white mb-4 sm:mb-0 mr-0 sm:mr-4 px-3 sm:px-5 py-1 sm:py-2 rounded-2xl"
+                  onChange={handleLanguageChange}
+                >
+                  {SUPPORTED_LANG.map((lang) => (
+                    <option key={lang.identifier} value={lang.identifier}>
+                      {lang.name}
+                    </option>
+                  ))}
+                </select>
+              )}
+              <button
+                className="bg-purple-900 text-white mb-4 sm:mb-0 mr-0 sm:mr-6 px-3 sm:px-5 py-1 sm:py-2 rounded-xl"
+                onClick={handleGptSearchClick}
+              >
+                {config ? 'Homepage' : 'GPT Search'}
+              </button>
+              <img
+                className="w-8 h-8 sm:w-11 sm:h-11 rounded-md mb-4 sm:mb-0"
+                alt="usericon"
+                src={AVATAR}
+              />
+              <button
+                className="text-white font-bold opacity-100"
+                onClick={handleSignout}
+              >
+                Sign Out
+              </button>
+            </div>
+          </>
         )}
       </div>
     </div>
